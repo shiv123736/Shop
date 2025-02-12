@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginni Bhai - Cold Drinks & Egg Disposal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Modern, clean font */
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+            color: #333;
+            /* line-height: 1.6; */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            position: relative;
+            padding: 40px;
+            /* Increased padding */
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            /* More prominent shadow */
+            border-radius: 12px;
+            /* More rounded corners */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            /* Increased margin */
+        }
+
+        h1 img {
+            max-width: 280px;
+            /* Slightly larger logo */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .details {
+            margin-top: 40px;
+        }
+
+        .details p {
+            margin-bottom: 15px;
+            /* Increased spacing */
+            font-size: 1.1rem;
+            /* Slightly larger font size */
+        }
+
+        .contact {
+            margin-top: 40px;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+            /* Increased spacing */
+            font-weight: 500;
+            /* Bolder contact info */
+        }
+
+        .whatsapp-link {
+            display: block;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background-color: #00a79d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            /* More rounded corners */
+            text-align: center;
+            font-weight: 600;
+            /* Bolder button text */
+            font-size: 1.1rem;
+            /* Larger button font */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Added shadow to the button */
+        }
+
+        .whatsapp-link:hover {
+            background-color: #00847c;
+        }
+
+        .address {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.1rem;
+            /* Larger address font */
+        }
+
+        .address p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 500px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 img {
+                max-width: 230px;
+            }
+
+            .details p,
+            .contact p,
+            .address p {
+                font-size: 1rem;
+                /* Slightly smaller font on mobile */
+            }
+
+            .whatsapp-link {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+     <style>
+        /* ... (other styles) ... */
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjusted minmax value */
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            display: flex; /* Use flexbox for vertical alignment */
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            display: block; /* Prevent image from affecting layout */
+        }
+        .product h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .product-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #00a79d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: auto; /* Push button to the bottom */
+        }
+        .product-button:hover {
+            background-color: #00847c;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            .product-list {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax for tablets */
+            }
+        }
+        @media (max-width: 500px) {
+            .product-list {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust minmax for phones */
+            }
+            .product img {
+                max-width: 90%; /* Further reduce image size on small screens */
+            }
+        }
+
+        .delivery-highlight {
+            background-color: #ffffcc; /* Light yellow background */
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px; /* Adjust margin as needed */
+            text-align: center; /* Center the text */
+            animation: bounce 1.5s infinite; /* Apply bounce animation */
+            font-weight: 500; /* Slightly bolder text */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-5px); /* Adjust bounce height */
+            }
+            60% {
+                transform: translateY(-3px); /* Adjust bounce height */
+            }
+        }
+
+        .floating-order-now {
+            position: absolute; /* Fixed position */
+            top: 500px; /* Adjust top position */
+            right: 80px; /* Adjust right position */
+            z-index: 100; /* Ensure it's on top of other elements */
+            opacity: 0.9; /* Slightly transparent */
+            transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+            cursor: pointer; /* Make it clear it's clickable */
+        }
+
+        .floating-order-now:hover {
+            opacity: 1; /* Fully opaque on hover */
+        }
+
+        .floating-order-now img {
+            max-width: 150px; /* Adjust image size */
+            height: auto;
+            display: block;
+        }
+
+        /* Responsive adjustments (optional) */
+        @media (max-width: 768px) {
+            .floating-order-now {
+                max-width: 120px; /* Smaller on tablets */
+                top: 480px;
+                right: 100px;
+            }
+        }
+        @media (max-width: 500px) {
+            .floating-order-now {
+                max-width: 100px; /* Smaller on phones */
+                top: 480px;
+                right: 100px;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="floating-order-now">
+            <a href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to place an order.">
+                <img src="/Images/OrderNow.png" alt="Order Now">
+            </a>
+        </div>
+        
+        <h1><img src="/images/logo.png" alt="Ginni Bhai Logo"></h1>
+        <div class="details">
+            <p><strong>Cold Drinks & Egg Disposal Supplier</strong></p>
+            <p>Time: 9 AM to 9 PM</p>
+            <p>Services: Retail, Home Delivery, Disposable Items, Party Orders (with Discount)</p>
+            <p>Retail & Wholesale</p>
+            <p>100% Fresh</p>
+        </div>
+        <div class="contact">
+            <p><strong>Contact:</strong></p>
+            <p>Prince: 8010423826</p>
+            <p>Ginni Bhai: 8860161335</p>
+        </div>
+        <a class="whatsapp-link"
+            href="https://api.whatsapp.com/send?phone=918010423826&text=Hello,%20I'd%20like%20to%20place%20an%20order.">Contact
+            us on WhatsApp</a>
+        <div class="address">
+            <p><strong>Address:</strong></p>
+            <p>Alipur garhi, Aliput-narela road near Triage park, Delhi - 110036</p>
+        </div>
+        <div class="delivery-highlight">
+            Delivery available within 5Km
+        </div>
+    </div>
+    <div class="container">
+        <div class="products">
+            <div class="product-group">
+                <h2>Coca-Cola Products</h2>
+                <div class="product-list">
+                    <div class="product">
+                        <img src="/Images/coke.png"
+                            alt="Coca-Cola">
+                        <!-- <h3>Coca-Cola</h3> -->
+                        <a class="product-button"
+                            href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to order Coca-Cola.">Order
+                            Now</a>
+                    </div>
+                    <div class="product">
+                        <img src="/Images/coke3.jpg"
+                            alt="Eggs">
+                        <!-- <h3>Coca-Cola</h3> -->
+                        <a class="product-button"
+                            href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to order Diet Coke.">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-group">
+                <h2>Disposable Items</h2>
+                <div class="product-list">
+                    <div class="product">
+                        <img src="/Images/paper_tray.png"
+                            alt="Disposable Plates">
+                        <!-- <h3>Disposable Plates</h3> -->
+                        <a class="product-button"
+                            href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to order Disposable Plates.">Order
+                            Now</a>
+                    </div>
+                    <div class="product">
+                        <img src="/Images/paper_cup.png"
+                            alt="Disposable Cups">
+                        <!-- <h3>Disposable Cups</h3> -->
+                        <a class="product-button"
+                            href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to order Disposable Cups.">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-group">
+                <h2>Paper Bags</h2>
+                <div class="product-list">
+                    <div class="product">
+                        <img src="/Images/paperbag1.webp"
+                            alt="Small Paper Bags">
+                        <!-- <h3>Small Paper Bags</h3> -->
+                        <a class="product-button"
+                            href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to order Small Paper Bags.">Order
+                            Now</a>
+                    </div>
+                    <div class="product">
+                        <img src="/Images/paperbag2.webp"
+                            alt="Large Paper Bags">
+                        <!-- <h3>Large Paper Bags</h3> -->
+                        <a class="product-button"
+                            href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to order Large Paper Bags.">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-group">
+                <h2>Eggs</h2>
+                <div class="product-list">
+                    <div class="product">
+                        <img src="/Images/eggs2.jpg"
+                            alt="Regular Eggs">
+                        <!-- <h3>Regular Eggs</h3> -->
+                        <a class="product-button"
+                            href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to order Regular Eggs.">Order
+                            Now</a>
+                    </div>
+                    <div class="product">
+                        <img src="/Images/eggs.png"
+                            alt="Brown Eggs">
+                        <!-- <h3>Brown Eggs</h3> -->
+                        <a class="product-button"
+                            href="https://api.whatsapp.com/send?phone=918010423826&text=I'd like to order Brown Eggs.">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
